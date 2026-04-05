@@ -88,16 +88,14 @@
 									</di>
 									<di class=" form-group"> <label class="col-xs-3">Hạng</label>
 									<div class="col-xs-9">
-										<input class="form-control" type="text" id="level"
-											name="level">
+ 										<!-- <input class="form-control" type="text" id="level" name="level">  -->
 										<form:input path="level" class="form-control" />
 									</div>
 									</di>
 									<di class=" form-group"> <label class="col-xs-3">Diện
 										tích sàn</label>
 									<div class="col-xs-9">
-										<input class="form-control" type="number" id="floorarea"
-											name="floorarea">
+										<!-- <input class="form-control" type="number" id="floorarea" name="floorarea"> -->
 										<form:input path="floorArea" class="form-control" />
 									</div>
 									</di>
@@ -260,7 +258,8 @@
 		function addOrUpateBuilding(data){
 			$.ajax({
 				type : "POST",
-				url : "/admin/building",
+				/* lưu ý phải call đúng api */
+				url :"<c:url value='/admin/building-edit'/>",
 				data : JSON.stringify(data),
 				contentType : "application/json",
 				dataType : "JSON",

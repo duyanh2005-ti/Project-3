@@ -38,4 +38,5 @@ public class BuildingAPI {
 	public void updateAssignmentBuilding(@RequestBody AssignmentBuildingDTO assignmentBuildingDTO) {
 		
 	}
+	
 }
