@@ -40,13 +40,10 @@ public class BuildingEntity extends BaseEntity{
 	private String level;
 	
 	@Column(name="rentprice")
-	private Integer rentPrice;
+	private Long rentPrice;
 	
 	@Column(name="servicefee")
 	private String serviceFee;
-	
-	@Column(name="renttime")
-	private String rentTime;
 	
 	@Column(name="brokeragefee")
 	private Double brokerageFee;
@@ -60,8 +57,42 @@ public class BuildingEntity extends BaseEntity{
 	@Column(name="managerphone")
 	private String managerPhone;
 	
+	@Column(name="rentpricedescription")
+	private String rentPriceDescription;
+	
+	@Column(name="carfee")
+	private String carFee;
+	
+	@Column(name="waterfee")
+	private String waterFee;
+	
+	@Column(name="motofee")
+	private String motoFee;
+	
+	@Column(name="overtimefee")
+	private String overtimeFee;
+	
+	@Column(name="electricityfee")
+	private String electricityFee;
+	
+	@Column(name="deposit")
+	private String deposit;
+	
+	@Column(name="payment")
+	private String payment;
+	
+	@Column(name="renttime")
+	private String rentTime;
+	
 	@Column(name="type")
-	private String TypeCode;
+	private String typeCode;
+	
+	@Column(name="direction")
+	private String direction;
+	
+	@Column(name="decorationtime")
+	private String decorationTime;
+	
 //	@OneToMany(mappedBy="buildingEntity",fetch = FetchType.LAZY)
 //	private List<AssignBuildingEntity> assignmentBuilding=new ArrayList<>();
 	@ManyToMany
@@ -86,11 +117,11 @@ public class BuildingEntity extends BaseEntity{
 	}
 	
 	public String getTypeCode() {
-		return TypeCode;
+		return typeCode;
 	}
 
 	public void setTypeCode(String typeCode) {
-		TypeCode = typeCode;
+		this.typeCode = typeCode;
 	}
 
 	public void setUserEntities(List<UserEntity> userEntities) {
@@ -179,11 +210,11 @@ public class BuildingEntity extends BaseEntity{
 		this.level = level;
 	}
 
-	public Integer getRentPrice() {
+	public Long getRentPrice() {
 		return rentPrice;
 	}
 
-	public void setRentPrice(Integer rentPrice) {
+	public void setRentPrice(Long rentPrice) {
 		this.rentPrice = rentPrice;
 	}
 
@@ -222,6 +253,86 @@ public class BuildingEntity extends BaseEntity{
 
 	public void setNote(String note) {
 		this.note = note;
+	}
+
+	public String getRentPriceDescription() {
+		return rentPriceDescription;
+	}
+
+	public void setRentPriceDescription(String rentPriceDescription) {
+		this.rentPriceDescription = rentPriceDescription;
+	}
+
+	public String getCarFee() {
+		return carFee;
+	}
+
+	public void setCarFee(String carFee) {
+		this.carFee = carFee;
+	}
+
+	public String getWaterFee() {
+		return waterFee;
+	}
+
+	public void setWaterFee(String waterFee) {
+		this.waterFee = waterFee;
+	}
+
+	public String getMotoFee() {
+		return motoFee;
+	}
+
+	public void setMotoFee(String motoFee) {
+		this.motoFee = motoFee;
+	}
+
+	public String getOvertimeFee() {
+		return overtimeFee;
+	}
+
+	public void setOvertimeFee(String overtimeFee) {
+		this.overtimeFee = overtimeFee;
+	}
+
+	public String getElectricityFee() {
+		return electricityFee;
+	}
+
+	public void setElectricityFee(String electricityFee) {
+		this.electricityFee = electricityFee;
+	}
+
+	public String getDeposit() {
+		return deposit;
+	}
+
+	public void setDeposit(String deposit) {
+		this.deposit = deposit;
+	}
+
+	public String getPayment() {
+		return payment;
+	}
+
+	public void setPayment(String payment) {
+		this.payment = payment;
+	}
+
+	public String getDirection() {
+		return direction;
+	}
+
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+
+	public String getDecorationTime() {
+		return decorationTime;
+	}
+
+	public void setDecorationTime(String decorationTime) {
+		this.decorationTime = decorationTime;
 	}
 	
 	

@@ -5,33 +5,34 @@ import java.util.List;
 import java.util.Map;
 
 public class BuildingDTO extends AbstractDTO{
-    private Long id;
-    private String name;
-    private String street;
-    private String ward;
-    private String district;
-    private Long numberOfBasement;
-    private Long floorArea;
-    private String level;
-    private List<String> typeCode;
-    private String overtimeFee;
-    private String electricityFee;
-    private String deposit;
-    private String payment;
-    private String rentTime;
-    private String decorationTime;
-    private String rentPriceDescription;
-    private String carFee;
-    private String motoFee;
-    private String structure;
-    private String direction;
+    private Long id;//
+    private String name;//
+    private String street;//
+    private String ward;//
+    private String district;//
+    private Long numberOfBasement;//
+    private Long floorArea;//
+    private String level;//
+    private List<String> typeCode;//
+    private String overtimeFee;//
+    private String electricityFee;//
+    private String deposit;//
+    private String payment;//
+    private String rentTime;//
+    private String decorationTime;//
+    private String rentPriceDescription;//
+    private String carFee;//
+    private String motoFee;//
+    private String waterFee;//
+    private String structure;//
+    private String direction;//
     private String note;
-    private String rentArea;
-    private String managerName;
-    private String managerPhone;
-    private Long rentPrice;
-    private String serviceFee;
-    private double brokerageFee;
+    private String rentArea;//
+    private String managerName;//
+    private String managerPhone;//
+    private Long rentPrice;//
+    private String serviceFee;//
+    private Double brokerageFee;//
     private String image;
     private String imageBase64;
     private String imageName;
@@ -42,7 +43,15 @@ public class BuildingDTO extends AbstractDTO{
         return buildingDTOs;
     }
 
-    public String getNote() {
+    public String getWaterFee() {
+		return waterFee;
+	}
+
+	public void setWaterFee(String waterFee) {
+		this.waterFee = waterFee;
+	}
+
+	public String getNote() {
         return note;
     }
 
@@ -194,11 +203,11 @@ public class BuildingDTO extends AbstractDTO{
         this.serviceFee = serviceFee;
     }
 
-    public double getBrokerageFee() {
+    public Double getBrokerageFee() {
         return brokerageFee;
     }
 
-    public void setBrokerageFee(double brokerageFee) {
+    public void setBrokerageFee(Double brokerageFee) {
         this.brokerageFee = brokerageFee;
     }
 

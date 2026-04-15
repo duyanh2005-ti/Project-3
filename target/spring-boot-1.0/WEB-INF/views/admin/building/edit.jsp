@@ -72,141 +72,130 @@
 										<form:input path="street" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Kết
-										cấu</label>
+									<di class=" form-group"> <label class="col-xs-3">Kết cấu</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="text" id="structure" name="structure"> -->
 										<form:input path="structure" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Số
-										tầng hầm</label>
+									<di class=" form-group"> <label class="col-xs-3">Số tầng hầm</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="numberofbasement" name="numberofbasement"> -->
 										<form:input path="numberOfBasement" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Hạng</label>
+									<di class=" form-group"> <label class="col-xs-3">Diện tích sàn</label>
 									<div class="col-xs-9">
-										<input class="form-control" type="text" id="level"
-											name="level">
-										<form:input path="level" class="form-control" />
-									</div>
-									</di>
-									<di class=" form-group"> <label class="col-xs-3">Diện
-										tích sàn</label>
-									<div class="col-xs-9">
-										<input class="form-control" type="number" id="floorarea"
-											name="floorarea">
+										<!-- <input class="form-control" type="number" id="floorarea" name="floorarea"> -->
 										<form:input path="floorArea" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Giá
-										thuê</label>
+									<di class=" form-group"> <label class="col-xs-3">Hướng</label>
 									<div class="col-xs-9">
-										<!-- <input class="form-control" type="number" id="direction" name="direction"> -->
 										<form:input path="direction" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Mô
-										tả giá</label>
+									<di class=" form-group"> <label class="col-xs-3">Hạng</label>
+									<div class="col-xs-9">
+ 										<!-- <input class="form-control" type="text" id="level" name="level">  -->
+										<form:input path="level" class="form-control" />
+									</div>
+									</di>
+									<di class=" form-group"> <label class="col-xs-3">Giá thuê</label>
+									<div class="col-xs-9">
+										<!-- <input class="form-control" type="number" id="direction" name="direction"> -->
+										<form:input path="rentPrice" class="form-control" />
+									</div>
+									</di>
+									<di class=" form-group"> <label class="col-xs-3">Mô tả giá</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="text" id="rentPriceDescription" name="rentPriceDescription"> -->
 										<form:input path="rentPriceDescription" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Phí
-										dịch vụ</label>
+									<di class=" form-group"> <label class="col-xs-3">Phí dịch vụ</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="serviceFee" name="serviceFee"> -->
 										<form:input path="serviceFee" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Phí
-										ôtô</label>
+									<di class=" form-group"> <label class="col-xs-3">Phí ôtô</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="carFee" name="carFee"> -->
 										<form:input path="carFee" class="form-control" />
 									</div>
 									</di>
-									<di class="form-group"> <label class="col-xs-3">Phí
-										mô tả</label>
+									<di class="form-group"> <label class="col-xs-3">Phí mô tả</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="text" id="rentPriceDescription" name="rentPriceDescription"> -->
 										<form:input path="rentPriceDescription" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Phí
-										ngoài giờ</label>
+									<di class=" form-group"> <label class="col-xs-3">Phí ngoài giờ</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="overtimeFee" name="overtimeFee"> -->
 										<form:input path="overtimeFee" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Tiền
-										điện</label>
+									<di class=" form-group"> <label class="col-xs-3">Tiền điện</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="electricityFee" name="electricityFee"> -->
 										<form:input path="electricityFee" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Đặt
-										cọc</label>
+									<di class=" form-group"> <label class="col-xs-3">Tiền nước</label>
+									<div class="col-xs-9">
+										<form:input path="waterFee" class="form-control" />
+									</div>
+									</di>
+									<di class=" form-group"> <label class="col-xs-3">Đặt cọc</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="deposit" name="deposit"> -->
 										<form:input path="deposit" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Thanh
-										toán</label>
+									<di class=" form-group"> <label class="col-xs-3">Thanh toán</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="text" id="payment" name="payment"> -->
 										<form:input path="payment" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Thời
-										hạn thuê</label>
+									<di class=" form-group"> <label class="col-xs-3">Thời hạn thuê</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="rentTime" name="rentTime"> -->
 										<form:input path="rentTime" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Thời
-										hạn trang trí</label>
+									<di class=" form-group"> <label class="col-xs-3">Thời hạn trang trí</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="decorationTime" name="decorationTime"> -->
 										<form:input path="decorationTime" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Tên
-										quản lý</label>
-									<div class="col-xs-9">
-										<!-- <input class="form-control" type="text" id="managerName" name="managerName"> -->
-										<form:input path="managerName" class="form-control" />
-									</div>
-									</di>
-									<di class=" form-group"> <label class="col-xs-3">SDT
-										quản lý</label>
-									<div class="col-xs-9">
-										<!-- <input class="form-control" type="number" id="managerPhone" name="managerPhone"> -->
-										<form:input path="managerPhone" class="form-control" />
-									</div>
-									</di>
-									<di class=" form-group"> <label class="col-xs-3">Phí
-										môi giới</label>
+									<di class=" form-group"> <label class="col-xs-3">Phí môi giới</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="number" id="brokerageFee" name="brokerageFee"> -->
 										<form:input path="brokerageFee" class="form-control" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Loại
-										toà nhà</label>
+									<di class=" form-group"> <label class="col-xs-3">Tên quản lý</label>
+									<div class="col-xs-9">
+										<!-- <input class="form-control" type="text" id="managerName" name="managerName"> -->
+										<form:input path="managerName" class="form-control" />
+									</div>
+									</di>
+									<di class=" form-group"> <label class="col-xs-3">SDT quản lý</label>
+									<div class="col-xs-9">
+										<!-- <input class="form-control" type="number" id="managerPhone" name="managerPhone"> -->
+										<form:input path="managerPhone" class="form-control" />
+									</div>
+									</di>
+									<di class=" form-group"> <label class="col-xs-3">Loại toà nhà</label>
 									<div class="col-xs-6">
 										<form:checkboxes items="${typeCodes}" path="typeCode" />
 									</div>
 									</di>
-									<di class=" form-group"> <label class="col-xs-3">Ghi
-										chú</label>
+									<di class=" form-group"> <label class="col-xs-3">Ghi chú</label>
 									<div class="col-xs-9">
 										<!-- <input class="form-control" type="text" id="note" name="note"> -->
 										<form:input path="note" class="form-control" />
@@ -260,7 +249,8 @@
 		function addOrUpateBuilding(data){
 			$.ajax({
 				type : "POST",
-				url : "/admin/building",
+				/* lưu ý phải call đúng api */
+				url :"<c:url value='/admin/building-edit'/>",
 				data : JSON.stringify(data),
 				contentType : "application/json",
 				dataType : "JSON",
