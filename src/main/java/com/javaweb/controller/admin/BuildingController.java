@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.javaweb.converter.BuildingConverter;
 import com.javaweb.entity.BuildingEntity;
 import com.javaweb.enums.buildingType;
 import com.javaweb.enums.districtCode;
@@ -33,7 +34,9 @@ public class BuildingController {
 	@Autowired
 	private IBuildingService buildingService;
 	@Autowired
-	private BuildingRepository buildingRepoditory;
+	private BuildingRepository buildingRepository;
+	@Autowired
+	private BuildingConverter buildingConverter;
 	
 	@RequestMapping(value = "/admin/building-list", method = RequestMethod.GET)
 	public ModelAndView BuildingList(@ModelAttribute BuildingSearchRequest buildingList, HttpServletRequest request) {
@@ -59,18 +62,20 @@ public class BuildingController {
 	@RequestMapping(value = "/admin/building-edit-{id}", method = RequestMethod.GET)
 	public ModelAndView BuildingEdit(@PathVariable("id") Long Id,HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView("admin/building/edit");
-		BuildingDTO building =new BuildingDTO();
-		building.setId(Id);
-		building.setName("garden building");
-		mav.addObject("buildingEdit",building);
+		BuildingDTO buildingDTO = buildingConverter.BuildingEntityToDto(Id);
+		mav.addObject("buildingEdit",buildingDTO);
 		mav.addObject("districts",districtCode.type());
 		mav.addObject("typeCodes",buildingType.type());
 		return mav;
 	}
+	@RequestMapping(value = "/admin/building-edit-{id}", method = RequestMethod.POST)
+	public void updateBuilding(@PathVariable("id") Long Id, @RequestBody BuildingDTO buildingDTO) {
+		buildingService.updatebuilding(buildingDTO);
+	}
 	@RequestMapping(value ="/admin/building-edit", method = RequestMethod.POST)
 	@ResponseBody
 	@Transactional
-	public void BuildingGet(@RequestBody BuildingDTO building){
+	public void addBuilding(@RequestBody BuildingDTO building){
 		BuildingEntity buildEntity =new BuildingEntity();
 		buildEntity.setName(building.getName());
 		buildEntity.setDistrict(building.getDistrict());
@@ -82,12 +87,6 @@ public class BuildingController {
 		buildEntity.setManagerName(building.getManagerName());
 		String type = String.join(",",building.getTypeCode());
 		buildEntity.setTypeCode(type);
-		buildingRepoditory.save(buildEntity);
-		try {
-		    buildingRepoditory.save(buildEntity);
-		    System.out.println("SAVE OK");
-		} catch (Exception e) {
-		    e.printStackTrace();
-		}
+		buildingRepository.save(buildEntity);
 	}
 }

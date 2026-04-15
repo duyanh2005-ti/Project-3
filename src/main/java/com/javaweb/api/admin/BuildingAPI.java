@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javaweb.model.dto.AssignmentBuildingDTO;
 import com.javaweb.model.dto.BuildingDTO;
 import com.javaweb.model.response.ResponseDTO;
+import com.javaweb.repository.AreaRepository;
+import com.javaweb.repository.BuildingRepository;
 import com.javaweb.service.IBuildingService;
 
 @RestController(value="BuildingApiOfAdmin")
@@ -21,13 +23,20 @@ import com.javaweb.service.IBuildingService;
 public class BuildingAPI {
 	@Autowired
 	private IBuildingService buildingService;
+	@Autowired
+	private BuildingRepository buildingRepository;
+	@Autowired
+	private AreaRepository areaRepository;
 	@PostMapping
 	public BuildingDTO AddOrUpdateBuilding(@RequestBody BuildingDTO buidlingDto) {
 		return buidlingDto;
 	}
 	@DeleteMapping("/{ids}")
 	public void deleteBuilding(@PathVariable List<Long> ids) {
-		System.out.print("ok");
+		areaRepository.deleteAreaByBuildingId(ids);
+		for(Long item:ids) {
+			buildingRepository.deleteById(item);
+		}
 	}
 	@GetMapping("/{id}/staffs")
 	public ResponseDTO loadStaff(@PathVariable Long id){
@@ -38,5 +47,4 @@ public class BuildingAPI {
 	public void updateAssignmentBuilding(@RequestBody AssignmentBuildingDTO assignmentBuildingDTO) {
 		
 	}
-	
 }

@@ -1,6 +1,6 @@
 com\javaweb\model\dto\CustomerDTO.class
 com\javaweb\repository\BuildingRepository.class
-com\javaweb\repository\custom\impl\BuildingRepositoryIMPL.class
+com\javaweb\converter\BuildingConverter.class
 com\javaweb\entity\BuildingEntity.class
 com\javaweb\config\JpaAuditingConfig$AuditorAwareImpl.class
 com\javaweb\entity\BaseEntity.class
@@ -57,6 +57,7 @@ com\javaweb\controller\admin\HomeController.class
 com\javaweb\model\response\ResponseDTO.class
 com\javaweb\config\WebSecurityConfig.class
 com\javaweb\controller\admin\BuildingController.class
+com\javaweb\repository\custom\impl\BuildingRepositoryImpl.class
 com\javaweb\model\dto\AbstractDTO.class
 com\javaweb\service\impl\BuildingService.class
 com\javaweb\api\admin\UserAPI.class

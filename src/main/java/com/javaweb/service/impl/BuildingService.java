@@ -7,16 +7,17 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.javaweb.converter.BuildingConverter;
 import com.javaweb.entity.AreaEntity;
 import com.javaweb.entity.BuildingEntity;
 import com.javaweb.entity.UserEntity;
+import com.javaweb.model.dto.BuildingDTO;
 import com.javaweb.model.request.BuildingSearchRequest;
 import com.javaweb.model.response.BuildingSearchResponse;
 import com.javaweb.model.response.ResponseDTO;
 import com.javaweb.model.response.StaffResponseDTO;
 import com.javaweb.repository.BuildingRepository;
 import com.javaweb.repository.UserRepository;
-import com.javaweb.repository.custom.BuildingRepositoryCustom;
 import com.javaweb.service.IBuildingService;
 
 @Service
@@ -28,6 +29,8 @@ public class BuildingService implements IBuildingService {
 	private BuildingRepository buildingRepository;
 	@Autowired
 	private UserRepository userRepository;
+	@Autowired
+	private BuildingConverter buildingConverter;
 
 	@Override
 	public ResponseDTO listStaffs(Long id) {
@@ -72,5 +75,29 @@ public class BuildingService implements IBuildingService {
 
 		}
 		return buildingList;
+	}
+	@Override
+	public void updatebuilding(BuildingDTO buildingDTO) {
+		BuildingEntity buildingEntity=buildingRepository.findById(buildingDTO.getId()).get();
+		buildingEntity.setName(buildingDTO.getName());
+		buildingEntity.setDistrict(buildingDTO.getDistrict());
+		buildingEntity.setServiceFee(buildingDTO.getServiceFee());
+		buildingEntity.setStreet(buildingDTO.getStreet());
+		buildingEntity.setCarFee(buildingDTO.getCarFee());
+		buildingEntity.setBrokerageFee(buildingDTO.getBrokerageFee());
+		buildingEntity.setDeposit(buildingDTO.getDeposit());
+		buildingEntity.setDirection(buildingDTO.getDirection());  
+		buildingEntity.setDecorationTime(buildingDTO.getDecorationTime());
+		buildingEntity.setElectricityFee(buildingDTO.getElectricityFee());
+		buildingEntity.setFloorArea(buildingDTO.getFloorArea());
+		buildingEntity.setWard(buildingDTO.getWard());
+		buildingEntity.setLevel(buildingDTO.getLevel());
+		buildingEntity.setManagerName(buildingDTO.getManagerName());
+		buildingEntity.setManagerPhone(buildingDTO.getManagerPhone());
+		buildingEntity.setMotoFee(buildingDTO.getMotoFee());
+		buildingEntity.setWaterFee(buildingDTO.getWaterFee());
+//		buildingEntity.setAreaEntites(null);
+		System.out.print("ok");
+		buildingRepository.save(buildingEntity);
 	}
 }
